@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/SofiaMargariti/nx-monorepo-example#readme",
   "devDependencies": {
-    "nx": "21.3.11"
+    "nx": "21.3.11",
+    "typescript": "^5.9.2"
   },
   "nx": {}
 }
