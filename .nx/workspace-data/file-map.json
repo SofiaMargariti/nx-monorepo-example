@@ -35,55 +35,171 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": "tsconfig.base.json",
-        "hash": "8900268571896142108"
-      },
-      {
-        "file": "tsconfig.tsbuildinfo",
-        "hash": "93947842359492202"
+        "file": ".gitignore",
+        "hash": "14822986742690875169"
       },
       {
         "file": "README.md",
         "hash": "16761331926879178924"
       },
       {
-        "file": "package.json",
-        "hash": "2835791293576258762"
-      },
-      {
         "file": "error.log",
         "hash": "3537019111692895134"
       },
       {
-        "file": "vitest.workspace.ts",
-        "hash": "8851963806934849101"
+        "file": "nx.json",
+        "hash": "2402009688056826063"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "2656789082308070337"
+      },
+      {
+        "file": "package.json",
+        "hash": "11134482951155259594"
       },
       {
         "file": "packages/.gitkeep",
         "hash": "3244421341483603138"
       },
       {
-        "file": "nx.json",
-        "hash": "8390502520096216143"
-      },
-      {
-        "file": ".gitignore",
-        "hash": "16023894880854878455"
+        "file": "tsconfig.base.json",
+        "hash": "8900268571896142108"
       },
       {
         "file": "tsconfig.json",
-        "hash": "5073006544957089315"
+        "hash": "16332913538675657275"
       },
       {
-        "file": "package-lock.json",
-        "hash": "8586670185980021994"
+        "file": "tsconfig.tsbuildinfo",
+        "hash": "9496092163795731894"
+      },
+      {
+        "file": "vitest.workspace.ts",
+        "hash": "8851963806934849101"
       }
     ],
     "projectFileMap": {
+      "@acme/animal": [
+        {
+          "file": "packages/animal/README.md",
+          "hash": "5837961357848514519"
+        },
+        {
+          "file": "packages/animal/dist/animal.d.ts",
+          "hash": "11476364373511672566"
+        },
+        {
+          "file": "packages/animal/dist/animal.d.ts.map",
+          "hash": "11166736387569872366"
+        },
+        {
+          "file": "packages/animal/dist/animal.js",
+          "hash": "1332261549251619463"
+        },
+        {
+          "file": "packages/animal/dist/index.d.ts",
+          "hash": "17135794072927984560"
+        },
+        {
+          "file": "packages/animal/dist/index.d.ts.map",
+          "hash": "6765875952839537865"
+        },
+        {
+          "file": "packages/animal/dist/index.js",
+          "hash": "12670922211273314461"
+        },
+        {
+          "file": "packages/animal/dist/lib/animal.d.ts",
+          "hash": "11476364373511672566"
+        },
+        {
+          "file": "packages/animal/dist/lib/animal.d.ts.map",
+          "hash": "10620733951704526543"
+        },
+        {
+          "file": "packages/animal/dist/lib/animal.js",
+          "hash": "1332261549251619463"
+        },
+        {
+          "file": "packages/animal/dist/tsconfig.lib.tsbuildinfo",
+          "hash": "3431969013814806134"
+        },
+        {
+          "file": "packages/animal/package.json",
+          "hash": "15725424181231958307",
+          "deps": [
+            "npm:tslib",
+            "npm:typescript@5.9.2"
+          ]
+        },
+        {
+          "file": "packages/animal/src/index.ts",
+          "hash": "12670922211273314461"
+        },
+        {
+          "file": "packages/animal/src/lib/animal.spec.ts",
+          "hash": "5015168136304486244"
+        },
+        {
+          "file": "packages/animal/src/lib/animal.ts",
+          "hash": "17411187276850316574"
+        },
+        {
+          "file": "packages/animal/tsconfig.json",
+          "hash": "12834038490315927699"
+        },
+        {
+          "file": "packages/animal/tsconfig.lib.json",
+          "hash": "8307916584467284948"
+        },
+        {
+          "file": "packages/animal/tsconfig.spec.json",
+          "hash": "12757693314151657395"
+        },
+        {
+          "file": "packages/animal/vite.config.ts",
+          "hash": "17023318154417515696",
+          "deps": [
+            "npm:vite"
+          ]
+        }
+      ],
       "@acme/zoo": [
         {
           "file": "packages/zoo/README.md",
           "hash": "5880790857447239216"
+        },
+        {
+          "file": "packages/zoo/dist/index.d.ts",
+          "hash": "6549814700891264519"
+        },
+        {
+          "file": "packages/zoo/dist/index.d.ts.map",
+          "hash": "15196951539568042787"
+        },
+        {
+          "file": "packages/zoo/dist/index.js",
+          "hash": "7639827363019670310"
+        },
+        {
+          "file": "packages/zoo/dist/lib/zoo.d.ts",
+          "hash": "3559534672270087713"
+        },
+        {
+          "file": "packages/zoo/dist/lib/zoo.d.ts.map",
+          "hash": "15417870808170769069"
+        },
+        {
+          "file": "packages/zoo/dist/lib/zoo.js",
+          "hash": "10026954490765950683",
+          "deps": [
+            "@acme/animal"
+          ]
+        },
+        {
+          "file": "packages/zoo/dist/tsconfig.lib.tsbuildinfo",
+          "hash": "9463005115911776000"
         },
         {
           "file": "packages/zoo/package.json",
@@ -127,89 +243,45 @@
           ]
         }
       ],
-      "@acme/animal": [
+      "@acme/util": [
         {
-          "file": "packages/animal/README.md",
-          "hash": "5837961357848514519"
+          "file": "packages/util/README.md",
+          "hash": "3218097057288864985"
         },
         {
-          "file": "packages/animal/dist/animal.d.ts",
-          "hash": "11476364373511672566"
-        },
-        {
-          "file": "packages/animal/dist/animal.d.ts.map",
-          "hash": "11166736387569872366"
-        },
-        {
-          "file": "packages/animal/dist/animal.js",
-          "hash": "1332261549251619463"
-        },
-        {
-          "file": "packages/animal/dist/index.d.ts",
-          "hash": "17135794072927984560"
-        },
-        {
-          "file": "packages/animal/dist/index.d.ts.map",
-          "hash": "6765875952839537865"
-        },
-        {
-          "file": "packages/animal/dist/index.js",
-          "hash": "12670922211273314461"
-        },
-        {
-          "file": "packages/animal/dist/lib/animal.d.ts",
-          "hash": "11557544691619171768"
-        },
-        {
-          "file": "packages/animal/dist/lib/animal.d.ts.map",
-          "hash": "16781256976355067930"
-        },
-        {
-          "file": "packages/animal/dist/lib/animal.js",
-          "hash": "1662745975790511862"
-        },
-        {
-          "file": "packages/animal/dist/tsconfig.lib.tsbuildinfo",
-          "hash": "7201651614855319521"
-        },
-        {
-          "file": "packages/animal/package.json",
-          "hash": "15581411736441574284",
+          "file": "packages/util/package.json",
+          "hash": "17088643759041717581",
           "deps": [
             "npm:tslib"
           ]
         },
         {
-          "file": "packages/animal/src/animal.ts",
-          "hash": "17411187276850316574"
+          "file": "packages/util/src/index.ts",
+          "hash": "11497266564754147742"
         },
         {
-          "file": "packages/animal/src/index.ts",
-          "hash": "12670922211273314461"
+          "file": "packages/util/src/lib/util.spec.ts",
+          "hash": "4532746389616978167"
         },
         {
-          "file": "packages/animal/src/lib/animal.spec.ts",
-          "hash": "5015168136304486244"
+          "file": "packages/util/src/lib/util.ts",
+          "hash": "10918027587459132976"
         },
         {
-          "file": "packages/animal/src/lib/animal.ts",
-          "hash": "15695944366502892043"
-        },
-        {
-          "file": "packages/animal/tsconfig.json",
+          "file": "packages/util/tsconfig.json",
           "hash": "12834038490315927699"
         },
         {
-          "file": "packages/animal/tsconfig.lib.json",
+          "file": "packages/util/tsconfig.lib.json",
           "hash": "8307916584467284948"
         },
         {
-          "file": "packages/animal/tsconfig.spec.json",
+          "file": "packages/util/tsconfig.spec.json",
           "hash": "12757693314151657395"
         },
         {
-          "file": "packages/animal/vite.config.ts",
-          "hash": "17023318154417515696",
+          "file": "packages/util/vite.config.ts",
+          "hash": "15821485718593848187",
           "deps": [
             "npm:vite"
           ]

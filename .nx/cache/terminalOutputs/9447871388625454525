@@ -1,0 +1,10 @@
+> tsc --build tsconfig.lib.json
+
+[96msrc/lib/zoo.ts[0m:[93m1[0m:[93m10[0m - [91merror[0m[90m TS2305: [0mModule '"@acme/animal"' has no exported member 'getRandomAnimal'.
+
+[7m1[0m import { getRandomAnimal } from '@acme/animal';
+[7m [0m [91m         ~~~~~~~~~~~~~~~[0m
+
+
+Found 1 error.
+

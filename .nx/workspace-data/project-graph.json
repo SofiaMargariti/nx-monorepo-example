@@ -197,6 +197,207 @@
         "implicitDependencies": []
       }
     },
+    "@acme/util": {
+      "name": "@acme/util",
+      "type": "lib",
+      "data": {
+        "root": "packages/util",
+        "projectType": "library",
+        "targets": {
+          "typecheck": {
+            "dependsOn": [
+              "^typecheck"
+            ],
+            "cache": true,
+            "inputs": [
+              "production",
+              "^production",
+              {
+                "externalDependencies": [
+                  "typescript"
+                ]
+              }
+            ],
+            "outputs": [
+              "{projectRoot}/dist/**/*.d.ts",
+              "{projectRoot}/dist/**/*.d.ts.map",
+              "{projectRoot}/dist/tsconfig.lib.tsbuildinfo",
+              "{projectRoot}/out-tsc/vitest/**/*.d.ts",
+              "{projectRoot}/out-tsc/vitest/**/*.d.ts.map",
+              "{projectRoot}/out-tsc/vitest/tsconfig.tsbuildinfo"
+            ],
+            "syncGenerators": [
+              "@nx/js:typescript-sync"
+            ],
+            "metadata": {
+              "technologies": [
+                "typescript",
+                "typescript"
+              ],
+              "description": "Runs type-checking for the project.",
+              "help": {
+                "command": "npx tsc --build --help",
+                "example": {
+                  "args": [
+                    "--force"
+                  ]
+                }
+              }
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "cwd": "packages/util",
+              "command": "tsc --build --emitDeclarationOnly"
+            },
+            "configurations": {},
+            "parallelism": true
+          },
+          "build": {
+            "dependsOn": [
+              "^build"
+            ],
+            "options": {
+              "cwd": "packages/util",
+              "command": "tsc --build tsconfig.lib.json"
+            },
+            "cache": true,
+            "inputs": [
+              "{projectRoot}/package.json",
+              "{workspaceRoot}/tsconfig.base.json",
+              "{projectRoot}/tsconfig.lib.json",
+              "{projectRoot}/src/**/*.ts",
+              "!{projectRoot}/vite.config.ts",
+              "!{projectRoot}/vite.config.mts",
+              "!{projectRoot}/vitest.config.ts",
+              "!{projectRoot}/vitest.config.mts",
+              "!{projectRoot}/src/**/*.test.ts",
+              "!{projectRoot}/src/**/*.spec.ts",
+              "!{projectRoot}/src/**/*.test.tsx",
+              "!{projectRoot}/src/**/*.spec.tsx",
+              "!{projectRoot}/src/**/*.test.js",
+              "!{projectRoot}/src/**/*.spec.js",
+              "!{projectRoot}/src/**/*.test.jsx",
+              "!{projectRoot}/src/**/*.spec.jsx",
+              "^production",
+              {
+                "externalDependencies": [
+                  "typescript"
+                ]
+              }
+            ],
+            "outputs": [
+              "{projectRoot}/dist"
+            ],
+            "syncGenerators": [
+              "@nx/js:typescript-sync"
+            ],
+            "metadata": {
+              "technologies": [
+                "typescript"
+              ],
+              "description": "Builds the project with `tsc`.",
+              "help": {
+                "command": "npx tsc --build --help",
+                "example": {
+                  "args": [
+                    "--force"
+                  ]
+                }
+              }
+            },
+            "executor": "nx:run-commands",
+            "configurations": {},
+            "parallelism": true
+          },
+          "build-deps": {
+            "dependsOn": [
+              "^build"
+            ],
+            "configurations": {},
+            "options": {},
+            "parallelism": true,
+            "executor": "nx:noop"
+          },
+          "watch-deps": {
+            "continuous": true,
+            "dependsOn": [
+              "build-deps"
+            ],
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "npx nx watch --projects @acme/util --includeDependentProjects -- npx nx build-deps @acme/util"
+            },
+            "configurations": {},
+            "parallelism": true
+          },
+          "test": {
+            "options": {
+              "cwd": "packages/util",
+              "command": "vitest"
+            },
+            "cache": true,
+            "inputs": [
+              "default",
+              "^production",
+              {
+                "externalDependencies": [
+                  "vitest"
+                ]
+              },
+              {
+                "env": "CI"
+              }
+            ],
+            "outputs": [
+              "{projectRoot}/test-output/vitest/coverage"
+            ],
+            "metadata": {
+              "technologies": [
+                "vite"
+              ],
+              "description": "Run Vite tests",
+              "help": {
+                "command": "npx vitest --help",
+                "example": {
+                  "options": {
+                    "bail": 1,
+                    "coverage": true
+                  }
+                }
+              }
+            },
+            "executor": "nx:run-commands",
+            "configurations": {},
+            "parallelism": true,
+            "dependsOn": [
+              "^build"
+            ]
+          }
+        },
+        "metadata": {
+          "targetGroups": {},
+          "js": {
+            "packageName": "@acme/util",
+            "packageExports": {
+              "./package.json": "./package.json",
+              ".": {
+                "development": "./src/index.ts",
+                "types": "./dist/index.d.ts",
+                "import": "./dist/index.js",
+                "default": "./dist/index.js"
+              }
+            },
+            "packageMain": "./dist/index.js",
+            "isInPackageManagerWorkspaces": true
+          }
+        },
+        "name": "@acme/util",
+        "tags": [
+          "npm:private"
+        ],
+        "implicitDependencies": []
+      }
+    },
     "@acme/zoo": {
       "name": "@acme/zoo",
       "type": "lib",
@@ -4683,6 +4884,15 @@
         "hash": "sha512-p1diW6TqL9L07nNxvRMM7hMMw4c5XOo/1ibL4aAIGmSAt9slTE1Xgw5KWuof2uTOvCg9BY7ZRi+GaF+7sfgPeQ=="
       }
     },
+    "npm:typescript@5.9.2": {
+      "type": "npm",
+      "name": "npm:typescript@5.9.2",
+      "data": {
+        "version": "5.9.2",
+        "packageName": "typescript",
+        "hash": "sha512-CWBzXQrc/qOkhidw1OzBTQuYRbfyxDXJMVJ1XNwUHGROVmuaeiEm3OslpZ1RV96d7SKKjZKrSJu3+t/xlw3R9A=="
+      }
+    },
     "npm:unicode-canonical-property-names-ecmascript": {
       "type": "npm",
       "name": "npm:unicode-canonical-property-names-ecmascript",
@@ -4891,6 +5101,23 @@
       },
       {
         "source": "@acme/animal",
+        "target": "npm:typescript@5.9.2",
+        "type": "static"
+      },
+      {
+        "source": "@acme/animal",
+        "target": "npm:vite",
+        "type": "static"
+      }
+    ],
+    "@acme/util": [
+      {
+        "source": "@acme/util",
+        "target": "npm:tslib",
+        "type": "static"
+      },
+      {
+        "source": "@acme/util",
         "target": "npm:vite",
         "type": "static"
       }
@@ -4898,12 +5125,12 @@
     "@acme/zoo": [
       {
         "source": "@acme/zoo",
-        "target": "npm:tslib",
+        "target": "@acme/animal",
         "type": "static"
       },
       {
         "source": "@acme/zoo",
-        "target": "@acme/animal",
+        "target": "npm:tslib",
         "type": "static"
       },
       {
@@ -10164,5 +10391,5 @@
   },
   "version": "6.0",
   "errors": [],
-  "computedAt": 1755274010000
+  "computedAt": 1755274840279
 }
