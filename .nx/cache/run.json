@@ -1,0 +1,21 @@
+{
+  "run": {
+    "command": "nx build animal",
+    "startTime": "2025-08-15T16:06:01.190Z",
+    "endTime": "2025-08-15T16:06:01.553Z",
+    "inner": false
+  },
+  "tasks": [
+    {
+      "taskId": "@acme/animal:build",
+      "target": "build",
+      "projectName": "@acme/animal",
+      "hash": "11502885722939482325",
+      "startTime": "2025-08-15T16:06:01.245Z",
+      "endTime": "2025-08-15T16:06:01.552Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 1
+    }
+  ]
+}
